@@ -30,22 +30,22 @@ namespace wdfxekhach
             btnQLKH.BackColor = Color.FromArgb(0, 192, 192);
             btnQLChuyen.BackColor = Color.FromArgb(0, 192, 192);
             btnQLloaive.BackColor = Color.FromArgb(0, 192, 192);
-
+            button1.BackColor = Color.FromArgb(0, 192, 192);
             click_.BackColor = Color.Gray;
         }
 
         private void btn_thongke_Click(object sender, EventArgs e)
         {
 
-            //QuanLy_on_Click((Button)sender);
-            //btn_thongke.BackColor = Color.DodgerBlue;
-            //panelContainer.Controls.Clear();
-            ////.ThongKe tk = new ThongKe.ThongKe();
-            //tk.TopLevel = false;
-            //tk.FormBorderStyle = FormBorderStyle.None;
-            //tk.Dock = DockStyle.Fill;
-            //panelContainer.Controls.Add(tk);
-            //tk.Show();
+
+            QuanLy_on_Click((Button)sender);
+            panel3.Controls.Clear();
+            FrThongKe tl = new FrThongKe();
+            tl.TopLevel = false;
+            tl.FormBorderStyle = FormBorderStyle.None;
+            tl.Dock = DockStyle.Fill;
+            panel3.Controls.Add(tl);
+            tl.Show();
         }
 
         private void btnQLNhanVien_Click(object sender, EventArgs e)

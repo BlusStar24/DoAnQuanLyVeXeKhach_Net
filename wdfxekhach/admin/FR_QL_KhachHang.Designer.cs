@@ -133,7 +133,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(685, 106);
+            this.dataGridView1.Location = new System.Drawing.Point(711, 217);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -145,7 +145,7 @@
             // btn_luu
             // 
             this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.Location = new System.Drawing.Point(342, 593);
+            this.btn_luu.Location = new System.Drawing.Point(368, 704);
             this.btn_luu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(129, 57);
@@ -157,7 +157,7 @@
             // btn_xoa
             // 
             this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.Location = new System.Drawing.Point(180, 593);
+            this.btn_xoa.Location = new System.Drawing.Point(206, 704);
             this.btn_xoa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(126, 57);
@@ -169,7 +169,7 @@
             // btn_them
             // 
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(25, 593);
+            this.btn_them.Location = new System.Drawing.Point(51, 704);
             this.btn_them.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(124, 57);
@@ -212,7 +212,7 @@
             // btn_load
             // 
             this.btn_load.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_load.Location = new System.Drawing.Point(16, 13);
+            this.btn_load.Location = new System.Drawing.Point(42, 124);
             this.btn_load.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(130, 57);
@@ -224,7 +224,7 @@
             // btn_timkiem
             // 
             this.btn_timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timkiem.Location = new System.Drawing.Point(492, 593);
+            this.btn_timkiem.Location = new System.Drawing.Point(518, 704);
             this.btn_timkiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_timkiem.Name = "btn_timkiem";
             this.btn_timkiem.Size = new System.Drawing.Size(148, 57);
@@ -247,7 +247,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(16, 106);
+            this.groupBox1.Location = new System.Drawing.Point(42, 217);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);

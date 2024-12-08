@@ -83,6 +83,12 @@
     <Compile Include="admin\FRQL_NhanVien.Designer.cs">
       <DependentUpon>FRQL_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="admin\FrThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\FrThongKe.Designer.cs">
+      <DependentUpon>FrThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin\FRTuyenXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin\FRQL_NhanVien.resx">
       <DependentUpon>FRQL_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\FrThongKe.resx">
+      <DependentUpon>FrThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\FRTuyenXe.resx">
       <DependentUpon>FRTuyenXe.cs</DependentUpon>
