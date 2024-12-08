@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrQuanLyVeXeKhachcs));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_thongke = new System.Windows.Forms.Button();
@@ -39,20 +40,25 @@
             this.btnQLKH = new System.Windows.Forms.Button();
             this.btnQLloaive = new System.Windows.Forms.Button();
             this.btnQLTuyen = new System.Windows.Forms.Button();
-            this.btn_DangXuat = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_DangXuat = new System.Windows.Forms.Button();
+            this.btn_quenmk = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel1.Controls.Add(this.btn_quenmk);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_thongke);
             this.panel1.Controls.Add(this.btnQLVe);
@@ -76,10 +82,10 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(0, 563);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -94,10 +100,10 @@
             // btn_thongke
             // 
             this.btn_thongke.AutoSize = true;
-            this.btn_thongke.BackColor = System.Drawing.Color.Blue;
+            this.btn_thongke.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btn_thongke.FlatAppearance.BorderSize = 0;
             this.btn_thongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thongke.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_thongke.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_thongke.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_thongke.Location = new System.Drawing.Point(0, 634);
             this.btn_thongke.Margin = new System.Windows.Forms.Padding(0);
@@ -112,10 +118,10 @@
             // btnQLVe
             // 
             this.btnQLVe.AutoSize = true;
-            this.btnQLVe.BackColor = System.Drawing.Color.Blue;
+            this.btnQLVe.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLVe.FlatAppearance.BorderSize = 0;
             this.btnQLVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLVe.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLVe.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLVe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLVe.Location = new System.Drawing.Point(0, 494);
             this.btnQLVe.Margin = new System.Windows.Forms.Padding(0);
@@ -130,10 +136,10 @@
             // btnQLChuyen
             // 
             this.btnQLChuyen.AutoSize = true;
-            this.btnQLChuyen.BackColor = System.Drawing.Color.Blue;
+            this.btnQLChuyen.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLChuyen.FlatAppearance.BorderSize = 0;
             this.btnQLChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLChuyen.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLChuyen.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLChuyen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLChuyen.Location = new System.Drawing.Point(0, 423);
             this.btnQLChuyen.Margin = new System.Windows.Forms.Padding(0);
@@ -148,10 +154,10 @@
             // btnQLNhanVien
             // 
             this.btnQLNhanVien.AutoSize = true;
-            this.btnQLNhanVien.BackColor = System.Drawing.Color.Blue;
+            this.btnQLNhanVien.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLNhanVien.FlatAppearance.BorderSize = 0;
             this.btnQLNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLNhanVien.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLNhanVien.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLNhanVien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLNhanVien.Location = new System.Drawing.Point(0, 0);
             this.btnQLNhanVien.Margin = new System.Windows.Forms.Padding(0);
@@ -166,10 +172,10 @@
             // btnQLTX
             // 
             this.btnQLTX.AutoSize = true;
-            this.btnQLTX.BackColor = System.Drawing.Color.Blue;
+            this.btnQLTX.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLTX.FlatAppearance.BorderSize = 0;
             this.btnQLTX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLTX.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLTX.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLTX.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLTX.Location = new System.Drawing.Point(0, 213);
             this.btnQLTX.Margin = new System.Windows.Forms.Padding(0);
@@ -184,10 +190,10 @@
             // btnQLXe
             // 
             this.btnQLXe.AutoSize = true;
-            this.btnQLXe.BackColor = System.Drawing.Color.Blue;
+            this.btnQLXe.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLXe.FlatAppearance.BorderSize = 0;
             this.btnQLXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLXe.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLXe.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLXe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLXe.Location = new System.Drawing.Point(0, 352);
             this.btnQLXe.Margin = new System.Windows.Forms.Padding(0);
@@ -202,10 +208,10 @@
             // btnQLKH
             // 
             this.btnQLKH.AutoSize = true;
-            this.btnQLKH.BackColor = System.Drawing.Color.Blue;
+            this.btnQLKH.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLKH.FlatAppearance.BorderSize = 0;
             this.btnQLKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLKH.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLKH.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLKH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLKH.Location = new System.Drawing.Point(0, 71);
             this.btnQLKH.Margin = new System.Windows.Forms.Padding(0);
@@ -220,10 +226,10 @@
             // btnQLloaive
             // 
             this.btnQLloaive.AutoSize = true;
-            this.btnQLloaive.BackColor = System.Drawing.Color.Blue;
+            this.btnQLloaive.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLloaive.FlatAppearance.BorderSize = 0;
             this.btnQLloaive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLloaive.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLloaive.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLloaive.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLloaive.Location = new System.Drawing.Point(0, 142);
             this.btnQLloaive.Margin = new System.Windows.Forms.Padding(0);
@@ -238,10 +244,10 @@
             // btnQLTuyen
             // 
             this.btnQLTuyen.AutoSize = true;
-            this.btnQLTuyen.BackColor = System.Drawing.Color.Blue;
+            this.btnQLTuyen.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnQLTuyen.FlatAppearance.BorderSize = 0;
             this.btnQLTuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLTuyen.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLTuyen.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQLTuyen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLTuyen.Location = new System.Drawing.Point(0, 281);
             this.btnQLTuyen.Margin = new System.Windows.Forms.Padding(0);
@@ -252,25 +258,6 @@
             this.btnQLTuyen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLTuyen.UseVisualStyleBackColor = false;
             this.btnQLTuyen.Click += new System.EventHandler(this.btnQLTuyen_Click);
-            // 
-            // btn_DangXuat
-            // 
-            this.btn_DangXuat.BackColor = System.Drawing.Color.Blue;
-            this.btn_DangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_DangXuat.FlatAppearance.BorderSize = 0;
-            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangXuat.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
-            this.btn_DangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DangXuat.Location = new System.Drawing.Point(0, 1128);
-            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_DangXuat.Name = "btn_DangXuat";
-            this.btn_DangXuat.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.btn_DangXuat.Size = new System.Drawing.Size(299, 68);
-            this.btn_DangXuat.TabIndex = 9;
-            this.btn_DangXuat.Text = "Đăng xuất";
-            this.btn_DangXuat.UseVisualStyleBackColor = false;
-            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
             // 
             // panelContainer
             // 
@@ -292,7 +279,9 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Blue;
+            this.panel2.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel2.Controls.Add(this.lblTime);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -306,11 +295,76 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(443, 35);
+            this.label1.Location = new System.Drawing.Point(1015, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(538, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ BÁN VÉ XE KHÁCH";
+            // 
+            // btn_DangXuat
+            // 
+            this.btn_DangXuat.BackColor = System.Drawing.Color.Brown;
+            this.btn_DangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_DangXuat.FlatAppearance.BorderSize = 0;
+            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangXuat.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
+            this.btn_DangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DangXuat.Location = new System.Drawing.Point(0, 1128);
+            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.btn_DangXuat.Size = new System.Drawing.Size(299, 68);
+            this.btn_DangXuat.TabIndex = 9;
+            this.btn_DangXuat.Text = "Đăng Xuất";
+            this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DangXuat.UseVisualStyleBackColor = false;
+            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
+            // 
+            // btn_quenmk
+            // 
+            this.btn_quenmk.BackColor = System.Drawing.Color.Brown;
+            this.btn_quenmk.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_quenmk.FlatAppearance.BorderSize = 0;
+            this.btn_quenmk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_quenmk.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_quenmk.ForeColor = System.Drawing.Color.White;
+            this.btn_quenmk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_quenmk.Location = new System.Drawing.Point(0, 1060);
+            this.btn_quenmk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_quenmk.Name = "btn_quenmk";
+            this.btn_quenmk.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.btn_quenmk.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_quenmk.Size = new System.Drawing.Size(299, 68);
+            this.btn_quenmk.TabIndex = 40;
+            this.btn_quenmk.Text = "Quên Mật Khẩu";
+            this.btn_quenmk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_quenmk.UseVisualStyleBackColor = false;
+            this.btn_quenmk.Click += new System.EventHandler(this.btn_quenmk_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(393, 244);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Gold;
+            this.lblTime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTime.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblTime.Location = new System.Drawing.Point(2199, 40);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(314, 39);
+            this.lblTime.TabIndex = 20;
+            this.lblTime.Text = "22:22 22/12/2024";
             // 
             // FrQuanLyVeXeKhachcs
             // 
@@ -328,13 +382,13 @@
             this.panelContainer.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_DangXuat;
         private System.Windows.Forms.Panel panelContainer;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel2;
@@ -348,7 +402,11 @@
         private System.Windows.Forms.Button btnQLloaive;
         private System.Windows.Forms.Button btnQLTuyen;
         private System.Windows.Forms.Button btn_thongke;
-        private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_DangXuat;
+        private System.Windows.Forms.Button btn_quenmk;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTime;
     }
 }

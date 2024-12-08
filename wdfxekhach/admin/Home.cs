@@ -72,11 +72,7 @@ namespace wdfxekhach.Admin
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
-        }
-
+      
         private void btn_dangxuat_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -164,6 +160,11 @@ namespace wdfxekhach.Admin
         }
 
         private void btnQLKH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
         {
 
         }

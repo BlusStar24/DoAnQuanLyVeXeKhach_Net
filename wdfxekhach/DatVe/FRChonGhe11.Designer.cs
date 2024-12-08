@@ -45,9 +45,9 @@
             this.btn_109 = new System.Windows.Forms.Button();
             this.btn_106 = new System.Windows.Forms.Button();
             this.btn_108 = new System.Windows.Forms.Button();
-            this.btn_111 = new System.Windows.Forms.Button();
-            this.btn_105 = new System.Windows.Forms.Button();
             this.btn_110 = new System.Windows.Forms.Button();
+            this.btn_105 = new System.Windows.Forms.Button();
+            this.btn_111 = new System.Windows.Forms.Button();
             this.btn_107 = new System.Windows.Forms.Button();
             this.btn_103 = new System.Windows.Forms.Button();
             this.btn_104 = new System.Windows.Forms.Button();
@@ -70,9 +70,9 @@
             this.panel2.Controls.Add(this.btn_109);
             this.panel2.Controls.Add(this.btn_106);
             this.panel2.Controls.Add(this.btn_108);
-            this.panel2.Controls.Add(this.btn_111);
-            this.panel2.Controls.Add(this.btn_105);
             this.panel2.Controls.Add(this.btn_110);
+            this.panel2.Controls.Add(this.btn_105);
+            this.panel2.Controls.Add(this.btn_111);
             this.panel2.Controls.Add(this.btn_107);
             this.panel2.Controls.Add(this.btn_103);
             this.panel2.Controls.Add(this.btn_104);
@@ -285,18 +285,18 @@
             this.btn_108.UseVisualStyleBackColor = false;
             this.btn_108.Click += new System.EventHandler(this.btn_108_Click);
             // 
-            // btn_111
+            // btn_110
             // 
-            this.btn_111.BackColor = System.Drawing.Color.White;
-            this.btn_111.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_111.Location = new System.Drawing.Point(171, 485);
-            this.btn_111.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_111.Name = "btn_111";
-            this.btn_111.Size = new System.Drawing.Size(162, 98);
-            this.btn_111.TabIndex = 26;
-            this.btn_111.Text = "110";
-            this.btn_111.UseVisualStyleBackColor = false;
-            this.btn_111.Click += new System.EventHandler(this.btn_111_Click);
+            this.btn_110.BackColor = System.Drawing.Color.White;
+            this.btn_110.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_110.Location = new System.Drawing.Point(171, 485);
+            this.btn_110.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_110.Name = "btn_110";
+            this.btn_110.Size = new System.Drawing.Size(162, 98);
+            this.btn_110.TabIndex = 26;
+            this.btn_110.Text = "110";
+            this.btn_110.UseVisualStyleBackColor = false;
+            this.btn_110.Click += new System.EventHandler(this.btn_110_Click);
             // 
             // btn_105
             // 
@@ -311,18 +311,19 @@
             this.btn_105.UseVisualStyleBackColor = false;
             this.btn_105.Click += new System.EventHandler(this.btn_105_Click);
             // 
-            // btn_110
+            // btn_111
             // 
-            this.btn_110.BackColor = System.Drawing.Color.Yellow;
-            this.btn_110.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_110.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_110.Location = new System.Drawing.Point(513, 485);
-            this.btn_110.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_110.Name = "btn_110";
-            this.btn_110.Size = new System.Drawing.Size(162, 98);
-            this.btn_110.TabIndex = 30;
-            this.btn_110.Text = "111";
-            this.btn_110.UseVisualStyleBackColor = false;
+            this.btn_111.BackColor = System.Drawing.Color.Yellow;
+            this.btn_111.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_111.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_111.Location = new System.Drawing.Point(513, 485);
+            this.btn_111.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_111.Name = "btn_111";
+            this.btn_111.Size = new System.Drawing.Size(162, 98);
+            this.btn_111.TabIndex = 30;
+            this.btn_111.Text = "111";
+            this.btn_111.UseVisualStyleBackColor = false;
+            this.btn_111.Click += new System.EventHandler(this.btn_111_Click);
             // 
             // btn_107
             // 
@@ -467,9 +468,9 @@
         private System.Windows.Forms.Button btn_109;
         private System.Windows.Forms.Button btn_106;
         private System.Windows.Forms.Button btn_108;
-        private System.Windows.Forms.Button btn_111;
-        private System.Windows.Forms.Button btn_105;
         private System.Windows.Forms.Button btn_110;
+        private System.Windows.Forms.Button btn_105;
+        private System.Windows.Forms.Button btn_111;
         private System.Windows.Forms.Button btn_107;
         private System.Windows.Forms.Button btn_103;
         private System.Windows.Forms.Button btn_104;

@@ -28,7 +28,7 @@ namespace wdfxekhach
         public DataTable dt;
         
         public static string  ChuyenDangChon, GheDangChon, SoDienThoai, mavexe, thanhtien;
-        public static int GiaVeDangChon, MaKhachHang;
+       
         public static int chuyendangchon;
         public static string DiemDon, DiemTra;
         public static List<string> DsGheDangChon = new List<string>();
@@ -39,7 +39,7 @@ namespace wdfxekhach
         public static int MaNHanVien;
         public SqlConnection connection;
         public QL_BANVEXEKHACH_NETEntities1 db;
-
+        public static int GiaVeDangChon, MaKhachHang;
         // Constructor private để đảm bảo không ai có thể tạo instance mới
         public CONNECT()
         {
@@ -313,57 +313,119 @@ AND (
             return danhSachGhe;
         }
 
+        //public List<string> LoadXacNhanThongTinMuaVe(int mahanhk)
+        //{
+        //    List<string> thongTinVe = new List<string>();
+        //    int macx = chuyendangchon;
+        //    try
+        //    {
+        //        var thongTin = (from hk in db.HANHKHACHes
+        //                        join vx in db.VEXEs on hk.MaHanhKhach equals vx.MaHanhKhach
+        //                        join cx in db.CHUYENXEs on vx.MaChuyenXe equals cx.MaChuyenXe
+        //                        join tx in db.TUYENXEs on cx.MaTuyenXe equals tx.MaTuyenXe
+        //                        where hk.MaHanhKhach == mahanhk
+        //                        select new
+        //                        {
+        //                            HoTen = hk.TenHanhKhach,
+        //                            SoDienThoai = hk.SoDienThoai,
+        //                            Email = hk.Email,
+        //                            TenTuyen = tx.TenTuyenXe,
+        //                            NgayDi = cx.ThoiGianXuatPhat,  // Giữ nguyên để lấy ngày giờ đầy đủ
+        //                            GioDi = cx.ThoiGianXuatPhat,  // Lấy ngày và giờ từ cơ sở dữ liệu
+        //                            GioDen = cx.ThoiGianDenDuKien,  // Lấy ngày và giờ từ cơ sở dữ liệu
+
+        //                            GiaVe = cx.GiaTien
+        //                        }).FirstOrDefault();
+
+        //        if (thongTin != null)
+        //        {
+        //            thongTinVe.Add(thongTin.HoTen);
+        //            thongTinVe.Add(thongTin.SoDienThoai);
+        //            thongTinVe.Add(thongTin.Email);
+        //            thongTinVe.Add(thongTin.TenTuyen);
+
+        //            // Chuyển đổi NgayDi, GioDi và GioDen sang chuỗi sau khi truy vấn
+        //            if (thongTin.NgayDi.HasValue)
+        //            {
+        //                thongTinVe.Add(thongTin.NgayDi.Value.ToString("dd/MM/yyyy"));
+        //            }
+        //            else
+        //            {
+        //                thongTinVe.Add("N/A");
+        //            }
+
+        //            thongTinVe.Add(thongTin.GioDi.HasValue ? thongTin.GioDi.Value.ToString("HH:mm") : string.Empty);
+        //            thongTinVe.Add(thongTin.GioDen.HasValue ? thongTin.GioDen.Value.ToString("HH:mm") : string.Empty);
+
+        //            thongTinVe.Add(thongTin.GiaVe.ToString("N0") + " VND");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Không tìm thấy thông tin vé với số điện thoại đã cung cấp.");
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine("Lỗi khi tải thông tin xác nhận vé: " + ex.Message);
+        //    }
+
+        //    return thongTinVe;
+        //}
         public List<string> LoadXacNhanThongTinMuaVe(int mahanhk)
         {
             List<string> thongTinVe = new List<string>();
-           
             try
             {
-                var thongTin = (from hk in db.HANHKHACHes
-                                join vx in db.VEXEs on hk.MaHanhKhach equals vx.MaHanhKhach
-                                join cx in db.CHUYENXEs on vx.MaChuyenXe equals cx.MaChuyenXe
-                                join tx in db.TUYENXEs on cx.MaTuyenXe equals tx.MaTuyenXe
-                                where hk.MaHanhKhach == mahanhk
-                                select new
-                                {
-                                    HoTen = hk.TenHanhKhach,
-                                    SoDienThoai = hk.SoDienThoai,
-                                    Email = hk.Email,
-                                    TenTuyen = tx.TenTuyenXe,
-                                    NgayDi = cx.ThoiGianXuatPhat,  // Giữ nguyên để lấy ngày giờ đầy đủ
-                                    GioDi = cx.ThoiGianXuatPhat,  // Lấy ngày và giờ từ cơ sở dữ liệu
-                                    GioDen = cx.ThoiGianDenDuKien,  // Lấy ngày và giờ từ cơ sở dữ liệu
+                // Lấy thông tin hành khách
+                var thongTinHanhKhach = (from hk in db.HANHKHACHes
+                                         where hk.MaHanhKhach == mahanhk
+                                         select new
+                                         {
+                                             HoTen = hk.TenHanhKhach,
+                                             SoDienThoai = hk.SoDienThoai,
+                                             Email = hk.Email
+                                         }).FirstOrDefault();
 
-                                    GiaVe = cx.GiaTien
-                                }).FirstOrDefault();
-
-                if (thongTin != null)
+                // Nếu tìm thấy thông tin hành khách
+                if (thongTinHanhKhach != null)
                 {
-                    thongTinVe.Add(thongTin.HoTen);
-                    thongTinVe.Add(thongTin.SoDienThoai);
-                    thongTinVe.Add(thongTin.Email);
-                    thongTinVe.Add(thongTin.TenTuyen);
-
-                    // Chuyển đổi NgayDi, GioDi và GioDen sang chuỗi sau khi truy vấn
-                    if (thongTin.NgayDi.HasValue)
-                    {
-                        thongTinVe.Add(thongTin.NgayDi.Value.ToString("dd/MM/yyyy"));
-                    }
-                    else
-                    {
-                        thongTinVe.Add("N/A");
-                    }
-
-                    thongTinVe.Add(thongTin.GioDi.HasValue ? thongTin.GioDi.Value.ToString("HH:mm") : string.Empty);
-                    thongTinVe.Add(thongTin.GioDen.HasValue ? thongTin.GioDen.Value.ToString("HH:mm") : string.Empty);
-
-                    thongTinVe.Add(thongTin.GiaVe.ToString("N0") + " VND");
+                    thongTinVe.Add(thongTinHanhKhach.HoTen);
+                    thongTinVe.Add(thongTinHanhKhach.SoDienThoai);
+                    thongTinVe.Add(thongTinHanhKhach.Email);
                 }
                 else
                 {
-                    Console.WriteLine("Không tìm thấy thông tin vé với số điện thoại đã cung cấp.");
+                    thongTinVe.Add("Không tìm thấy thông tin hành khách.");
+                    return thongTinVe;
                 }
-            
+
+                // Lấy thông tin chuyến xe
+                var thongTinChuyenXe = (from cx in db.CHUYENXEs
+                                        join tx in db.TUYENXEs on cx.MaTuyenXe equals tx.MaTuyenXe
+                                        where cx.MaChuyenXe == chuyendangchon  // Giả sử chuyendangchon là biến chứa mã chuyến xe
+                                        select new
+                                        {
+                                            TenTuyen = tx.TenTuyenXe,
+                                            GioDi = cx.ThoiGianXuatPhat,
+                                            GioDen = cx.ThoiGianDenDuKien,
+                                            GiaVe = cx.GiaTien
+                                        }).FirstOrDefault();
+
+                // Nếu tìm thấy thông tin chuyến xe
+                if (thongTinChuyenXe != null)
+                {
+                    thongTinVe.Add(thongTinChuyenXe.TenTuyen);
+
+                    // Chuyển đổi giờ phút
+                    thongTinVe.Add(thongTinChuyenXe.GioDi.HasValue ? thongTinChuyenXe.GioDi.Value.ToString("HH:mm") : string.Empty);
+                    thongTinVe.Add(thongTinChuyenXe.GioDen.HasValue ? thongTinChuyenXe.GioDen.Value.ToString("HH:mm") : string.Empty);
+                    thongTinVe.Add(thongTinChuyenXe.GiaVe.ToString("N0") + " VND");
+                }
+                else
+                {
+                    thongTinVe.Add("Không tìm thấy thông tin chuyến xe.");
+                }
             }
             catch (Exception ex)
             {

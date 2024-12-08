@@ -44,12 +44,10 @@
             this.btnQLloaive = new System.Windows.Forms.Button();
             this.btnQLTuyen = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -266,25 +264,11 @@
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.lblTime);
             this.panel2.Location = new System.Drawing.Point(350, 241);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1695, 260);
             this.panel2.TabIndex = 21;
-            // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTime.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTime.Location = new System.Drawing.Point(45, 7);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(203, 24);
-            this.lblTime.TabIndex = 19;
-            this.lblTime.Text = "22:22 22/12/2024";
             // 
             // panel1
             // 
@@ -300,7 +284,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+           
             // 
             // Home
             // 
@@ -316,8 +300,6 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +321,6 @@
         private System.Windows.Forms.Button btnQLloaive;
         private System.Windows.Forms.Button btnQLTuyen;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
     }

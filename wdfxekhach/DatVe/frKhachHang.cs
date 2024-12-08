@@ -22,8 +22,27 @@ namespace wdfxekhach
         public frKhachHang()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual; // Đặt vị trí thủ công
+            this.Size = new Size(1525, 915); // Kích thước của form
+
+            // Đặt form ở dưới bên phải màn hình
+            this.Location = new Point(
+                Screen.PrimaryScreen.WorkingArea.Width - this.Width, // Vị trí bên phải
+                Screen.PrimaryScreen.WorkingArea.Height - this.Height // Vị trí dưới cùng
+            );
             LoadDanhSachChuyenXe();
         }
+        protected override void OnMove(EventArgs e)
+        {
+            base.OnMove(e);
+
+            // Đặt lại vị trí cố định
+            this.Location = new Point(
+                Screen.PrimaryScreen.WorkingArea.Width - this.Width, // Bên phải
+                Screen.PrimaryScreen.WorkingArea.Height - this.Height // Dưới cùng
+            );
+        }
+
         //Data Source=XUANCUONG-PC;Initial Catalog=databaseQLBanVeXeKhach;Integrated Security=True;Encrypt=True;Trust Server Certificate=True
         //Data Source=.;Initial Catalog=quanlyxekhachdoan;Integrated Security=True;
         private CONNECT con = new CONNECT();
@@ -303,6 +322,8 @@ namespace wdfxekhach
         }
         private void frKhachHang_Load(object sender, EventArgs e)
         {
+            // Đặt form ở trạng thái phóng to
+          
             this.maHanhKhach = CONNECT.MaKhachHang;
             var diemDiList = con.LoadComboboxDiemDi();
             cbx_diemdi.DataSource = diemDiList;

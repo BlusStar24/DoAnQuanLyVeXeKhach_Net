@@ -63,7 +63,13 @@ namespace wdfxekhach
 
         private void FrQuanLyVeXeKhachcs_Load(object sender, EventArgs e)
         {
-           
+            if (CONNECT.manhanvien > 1)
+            {
+                btnQLNhanVien.Hide();
+            }
+            this.WindowState = FormWindowState.Maximized; 
+            this.MaximizeBox = true;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
             //panel2.Dock = DockStyle.Top;
             //panel2.Height = 100;
             //panel1.Dock = DockStyle.Left;
@@ -172,8 +178,19 @@ namespace wdfxekhach
 
         private void btn_DangXuat_Click(object sender, EventArgs e)
         {
+           
             this.Hide();
             new FRDangNhap().ShowDialog();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
+        }
+
+        private void btn_quenmk_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FRQuenMatKhau().ShowDialog();
         }
     }
 }

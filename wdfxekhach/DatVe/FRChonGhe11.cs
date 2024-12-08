@@ -103,11 +103,11 @@ namespace wdfxekhach
         {
             ChonGhe((Control)sender);
         }
-
-        private void btn_111_Click(object sender, EventArgs e)
+        private void btn_110_Click(object sender, EventArgs e)
         {
-            btn_101.Enabled = true;
+            ChonGhe((Control)sender);
         }
+
 
         private void FRChonGhe11_Load(object sender, EventArgs e)
         {
@@ -153,7 +153,7 @@ namespace wdfxekhach
                         btn_109.BackColor = Color.Gray;
                         btn_109.Enabled = false;
                         break;
-                    case "120":
+                    case "110":
                         btn_110.BackColor = Color.Gray;
                         btn_110.Enabled = false;
                         break;
@@ -168,6 +168,11 @@ namespace wdfxekhach
         private void llbl_Back_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_111_Click(object sender, EventArgs e)
+        {
+            this.Enabled = true;
         }
     }
 }
