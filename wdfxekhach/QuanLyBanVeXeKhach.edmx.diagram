@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="71a456f018be4c4680eaa8b106083e49" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.CHITIETVEXE" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.CHUYENXE" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.HANHKHACH" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.LOAIXE" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.NHANVIEN" Width="1.5" PointX="7.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.TAIKHOAN" Width="1.5" PointX="9.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.TAIXE" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.TINHTHANH" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.TUYENXE" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.VEXE" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_BANVEXEKHACH_NETModel.XE" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_CHITIETVEXE_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_CHITIETVEXE_VEXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_CHUYENXE_TUYENXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_CHUYENXE_XE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_VEXE_CHUYENXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_VEXE_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_XE_LOAIXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_TAIKHOAN_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_XE_TAIXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_TUYENXE_TINHTHANH_DIEMDEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_BANVEXEKHACH_NETModel.FK_TUYENXE_TINHTHANH_DIEMDI" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
