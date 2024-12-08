@@ -122,49 +122,51 @@ namespace wdfxekhach
             }
         }
 
-        public DataTable LoadVeCuaToi(int i)
+        public DataTable LoadVeCuaToi(int i, int maHanhKhach)
         {
             DataTable dt = new DataTable();
 
             string sql = @"
-    SELECT 
-        v.MaVeXe, 
-        CASE 
-            WHEN c.ThoiGianXuatPhat < GETDATE() THEN N'Hết hạn' 
-            ELSE N'Còn hạn' 
-        END AS TinhTrang,
-        c.ThoiGianXuatPhat AS NgayDi,
-        t.TenTuyenXe,
-        v.SoGhe AS MaGhe,
-        l.LoaiGhe,
-        c.ThoiGianXuatPhat,
-        ct.DiemDon,
-        c.ThoiGianDenDuKien,
-        ct.DiemTra,
-        c.GiaTien,
-        x.BienSoXe,
-        ct.NgayXuat -- Cột ngày xuất
-    FROM VEXE v
-    INNER JOIN CHUYENXE c ON v.MaChuyenXe = c.MaChuyenXe
-    INNER JOIN TUYENXE t ON c.MaTuyenXe = t.MaTuyenXe
-    INNER JOIN CHITIETVEXE ct ON v.MaVeXe = ct.MaVeXe
-    INNER JOIN XE x ON c.MaXe = x.MaXe
-    INNER JOIN LOAIXE l ON x.MaLoaiXe = l.MaLoaiXe
-    WHERE 
-        (@Filter < 0 AND c.ThoiGianXuatPhat < GETDATE()) OR
-        (@Filter > 0 AND c.ThoiGianXuatPhat > GETDATE()) OR
-        (@Filter = 0);
-    ";
+SELECT 
+    v.MaVeXe, 
+    CASE 
+        WHEN c.ThoiGianXuatPhat < GETDATE() THEN N'Hết hạn' 
+        ELSE N'Còn hạn' 
+    END AS TinhTrang,
+    c.ThoiGianXuatPhat AS NgayDi,
+    t.TenTuyenXe,
+    v.SoGhe AS MaGhe,
+    l.LoaiGhe,
+    c.ThoiGianXuatPhat,
+    ct.DiemDon,
+    c.ThoiGianDenDuKien,
+    ct.DiemTra,
+    c.GiaTien,
+    x.BienSoXe,
+    ct.NgayXuat -- Cột ngày xuất
+FROM VEXE v
+INNER JOIN CHUYENXE c ON v.MaChuyenXe = c.MaChuyenXe
+INNER JOIN TUYENXE t ON c.MaTuyenXe = t.MaTuyenXe
+INNER JOIN CHITIETVEXE ct ON v.MaVeXe = ct.MaVeXe
+INNER JOIN XE x ON c.MaXe = x.MaXe
+INNER JOIN LOAIXE l ON x.MaLoaiXe = l.MaLoaiXe
+WHERE v.MaHanhKhach = @MaHanhKhach
+AND (
+    (@Filter < 0 AND c.ThoiGianXuatPhat < GETDATE()) OR
+    (@Filter > 0 AND c.ThoiGianXuatPhat > GETDATE()) OR
+    (@Filter = 0)
+);
+";
 
             SqlCommand command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@Filter", i);
+            command.Parameters.AddWithValue("@MaHanhKhach", maHanhKhach);
 
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dt);
 
             return dt;
         }
-
 
         public List<object> TimChuyenXe(int diemDi, int diemDen, DateTime ngayDi)
         {

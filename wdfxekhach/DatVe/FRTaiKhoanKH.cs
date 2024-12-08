@@ -61,14 +61,10 @@ namespace wdfxekhach
                 formKhachHang.loadKhachHang(maHanhKhach);
                 formKhachHang.Show();
                 frtaikhoan.Hide();
-
-            }
-            if (maHanhKhach > 0)
-            {
                 CONNECT.SoDienThoai = soDienThoai;
-                CONNECT.MaKhachHang = maHanhKhach; // Lưu mã hành khách vào CONNECT
-                this.Hide(); // Chuyển tiếp sang giao diện khác nếu cần
+                CONNECT.MaKhachHang = maHanhKhach;
             }
+            
             else
             {
                 MessageBox.Show("Không tìm thấy hành khách với số điện thoại này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

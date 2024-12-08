@@ -295,16 +295,15 @@ namespace wdfxekhach
         }
 
 
-        void LoadchitietVe(int i)
+        void LoadchitietVe(int i,int mahanhkhach)
         {
-            DataTable ve = con.LoadVeCuaToi(i);
           
-            
-          
+            DataTable ve = con.LoadVeCuaToi(i, CONNECT.MaKhachHang);         
             dataGridView2.DataSource = ve;
         }
         private void frKhachHang_Load(object sender, EventArgs e)
         {
+            this.maHanhKhach = CONNECT.MaKhachHang;
             var diemDiList = con.LoadComboboxDiemDi();
             cbx_diemdi.DataSource = diemDiList;
             cbx_diemdi.DisplayMember = "TenTinhThanh";
@@ -315,7 +314,7 @@ namespace wdfxekhach
             cbx_diemden.DisplayMember = "TenTinhThanh";
             cbx_diemden.ValueMember = "MaTinhThanh";
 
-            LoadchitietVe(0);
+            LoadchitietVe(0, maHanhKhach);
             cbx_locve.Items.Add("Tất cả");
             cbx_locve.Items.Add("Còn hạn");
             cbx_locve.Items.Add("Hết hạn");
@@ -431,13 +430,13 @@ namespace wdfxekhach
             else
                 i = 0;    // Hiển thị tất cả vé
 
-            DataTable dt = con.LoadVeCuaToi(i);
+            DataTable dt = con.LoadVeCuaToi(i, CONNECT.MaKhachHang);
             dataGridView2.DataSource = dt;
         }
 
         private void btn_reload_Click(object sender, EventArgs e)
         {
-            LoadchitietVe(0);
+            LoadchitietVe(0, CONNECT.MaKhachHang);
         }
 
         private void tabcontrol_SelectedIndexChanged(object sender, EventArgs e)
